@@ -11,3 +11,26 @@ vet_clinic(# Neutered BOOLEAN,
 vet_clinic(# Weight_kg DECIMAL
 vet_clinic(# );
 CREATE TABLE
+
+
+vet_clinic=# ALTER TABLE animals
+vet_clinic-# ADD Spacies TEXT;
+ALTER TABLE
+vet_clinic=# testdb-# \d
+        List of relations
+ Schema |  Name   | Type  | Owner
+--------+---------+-------+-------
+ public | animals | table | ramin
+(1 row)
+
+vet_clinic-# testdb-# \d animals
+                   Table "public.animals"
+     Column      |  Type   | Collation | Nullable | Default
+-----------------+---------+-----------+----------+---------
+ id              | integer |           |          |
+ name            | text    |           |          |
+ date_of_birth   | date    |           |          |
+ escape_attempts | integer |           |          |
+ neutered        | boolean |           |          |
+ weight_kg       | numeric |           |          |
+ spacies         | text    |           |          |
