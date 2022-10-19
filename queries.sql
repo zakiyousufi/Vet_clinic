@@ -58,3 +58,11 @@ vet_clinic=# SELECT * FROM animals WHERE (weight_kg>= 10.4 AND  weight_kg<= 17.3
   3 | Pikachu | 2021-01-07    |               1 | f        |     15.04
   3 |         | 2021-01-07    |               1 | f        |     15.04
 (3 rows)
+
+SELECT COUNT(*) FROM animals;
+SELECT COUNT(*) FROM animals WHERE escape_attempts = 0;
+SELECT AVG(weight_kg) FROM animals;
+SELECT MAX(escape_attempts) FROM animals GROUP BY neutered;
+SELECT MIN(weight_kg) FROM animals;
+SELECT MAX(weight_kg) FROM animals;
+SELECT AVG(escape_attempts) FROM animals GROUP BY date_of_birth BETWEEN '1990-01-01' and '2000-12-31';
