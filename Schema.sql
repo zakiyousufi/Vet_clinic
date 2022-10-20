@@ -12,3 +12,9 @@ CREATE TABLE animals (
     neutered BIT,
     weight_kg DECIMAL,
 );
+
+CREATE TABLE owners (
+    id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    full_name TEXT NOT NULL,
+    age INT NOT NULL
+);
