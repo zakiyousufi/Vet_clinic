@@ -30,3 +30,9 @@ CREATE TABLE vets (
     age INT,
     date_of_graduation DATE
 );
+
+CREATE TABLE specializations (
+    species_id INT,
+    vets_id INT,
+    PRIMARY KEY (species_id, vets_id)
+);
