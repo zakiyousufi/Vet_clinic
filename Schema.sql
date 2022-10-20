@@ -36,3 +36,10 @@ CREATE TABLE specializations (
     vets_id INT,
     PRIMARY KEY (species_id, vets_id)
 );
+
+CREATE TABLE visits (
+    animals_id INT,
+    vets_id INT,
+    date DATE,
+    PRIMARY KEY (animals_id, vets_id, date)
+);
