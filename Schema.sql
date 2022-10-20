@@ -23,3 +23,10 @@ CREATE TABLE species (
     id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     name TEXT NOT NULL
 );
+
+CREATE TABLE vets (
+    id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    name TEXT NOT NULL,
+    age INT,
+    date_of_graduation DATE
+);
