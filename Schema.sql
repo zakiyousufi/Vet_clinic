@@ -51,3 +51,8 @@ ALTER TABLE animals ADD owner_id INT;
 
 ALTER TABLE animals ADD FOREIGN KEY (owner_id) REFERENCES owners(id);
 ALTER TABLE vets ALTER COLUMN name TYPE VARCHAR(250);
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+CREATE INDEX animals_id ON visits (animal_id);
+CREATE INDEX vets_id ON visits (vet_id);
+CREATE INDEX index_email ON owners (email);
